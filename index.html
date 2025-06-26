@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,50 +9,70 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
+      color: white;
       background-image: url('https://images.unsplash.com/photo-1555992336-cbfdb0b3c1d1?auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-
-    .container {
+    .convite {
       background: rgba(0, 0, 0, 0.7);
       padding: 30px;
-      max-width: 600px;
-      margin: 50px auto;
       border-radius: 12px;
       text-align: center;
+      max-width: 400px;
     }
-
     h1 {
       margin-top: 0;
-      font-size: 30px;
+      font-size: 28px;
     }
-
     p {
+      margin: 10px 0;
       font-size: 18px;
-      margin: 8px 0;
     }
-
-    iframe {
+    .voto {
       margin-top: 20px;
+    }
+    button {
+      margin: 10px 5px;
+      padding: 10px 20px;
+      font-size: 16px;
       border: none;
-      border-radius: 8px;
-      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .sim {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .nao {
+      background-color: #f44336;
+      color: white;
+    }
+    .sim:hover {
+      background-color: #45a049;
+    }
+    .nao:hover {
+      background-color: #e53935;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="convite">
     <h1>Churrasco dos Amigos 🍻</h1>
     <p><strong>📍 Local:</strong> Ibiajara 61</p>
     <p><strong>🕕 A partir das:</strong> 18h</p>
-    <p style="color: #ff4d4d;"><strong>🚫 Obs:</strong> Argamelo está proibido de entrar</p>
+    <p style="color: #ff4d4d;"><strong>🚫 Observação:</strong> Argamelo está proibido de entrar</p>
 
-    <!-- Substitua o link do iframe abaixo pelo seu gerado pelo Google Forms -->
-    <iframe src="https://docs.google.com/forms/d/e/SEU_ID/viewform?embedded=true" height="500">Carregando…</iframe>
+    <div class="voto">
+      <p><strong>Confirma sua presença?</strong></p>
+      <button class="sim" onclick="alert('Boa! Esperamos você lá!')">Eu irei</button>
+      <button class="nao" onclick="alert('Pô, que pena 😢')">Eu não vou conseguir</button>
+    </div>
   </div>
 </body>
 </html>
